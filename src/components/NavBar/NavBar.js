@@ -12,6 +12,8 @@ import {
   DropdownItem } from 'reactstrap';
 import { Link } from  'react-router-dom' 
 
+import "./NavBar.css"
+
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
@@ -35,12 +37,23 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link className="nav-link" to="/ProductList">ProductList</Link>
+                <Link className="nav-link" to="/ProductList">ProductList(RP)</Link>
               </NavItem>
               <NavItem>
-                <Link className="nav-link" to="/ProductTable">ProductTable</Link>
+                <Link className="nav-link" to="/ProductTable">ProductTable(RP)</Link>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              <NavItem>
+                
+                  <div className="divider-vertical"></div>
+                
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to="/ProductListWithHOC">ProductList(HOC)</Link>
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to="/ProductTableWithHOC">ProductTable(HOC)</Link>
+              </NavItem>
+              {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Options
                 </DropdownToggle>
@@ -56,7 +69,7 @@ export default class Example extends React.Component {
                     Reset
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
         </Navbar>
