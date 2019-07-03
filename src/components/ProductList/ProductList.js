@@ -49,7 +49,7 @@ export default class ProductList extends Component {
                 <td>{product.id}</td>
                 <td>{product.name}</td>
                 <td>{product.price}</td>
-                <td></td><Button color="success">Add to Cart</Button>
+                <td><Button color="success">Add to Cart</Button></td>
               </tr>
               ))}
           </tbody>
