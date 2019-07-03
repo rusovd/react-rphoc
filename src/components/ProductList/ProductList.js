@@ -45,11 +45,11 @@ export default class ProductList extends Component {
           </thead>
           <tbody>
             {this.state.products.map(product => (
-              <tr>
+              <tr key={product.id}>
                 <td>{product.id}</td>
                 <td>{product.name}</td>
                 <td>{product.price}</td>
-                <Button color="success">Add to Cart</Button>
+                <td></td><Button color="success">Add to Cart</Button>
               </tr>
               ))}
           </tbody>
