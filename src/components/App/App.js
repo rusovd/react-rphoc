@@ -21,7 +21,15 @@ export default class App extends Component {
             />
           )}
         />
-        <Route path="/ProductTable" component={ProductTable} />
+        <Route
+          path="/ProductTable" 
+          render={() => (
+            <ProductData
+              render={({ products }) => 
+                <ProductTable products={products} />}
+            />
+          )}
+        />
       </Router>
     );
   }
